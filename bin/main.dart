@@ -1,6 +1,5 @@
 import 'package:gotta_learn_dart/gotta_learn_dart.dart' as gotta_learn_dart;
 import 'package:gotta_learn_dart/learning_http.dart' as learning_http;
-import 'dart:convert' as convert;
 import 'dart:io';
 
 void callFibonacci() {
@@ -17,7 +16,7 @@ void callFibonacci() {
 
 Future<void> callHTTP() async {
   var url = 'https://jsonplaceholder.typicode.com/posts/1';
-  var object = await learning_http.getTitle(url);
+  var object = await learning_http.getData(url);
   print("${object['body']}");
 }
 
